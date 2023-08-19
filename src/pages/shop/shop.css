@@ -7,12 +7,18 @@
     font-size: 35px;
 }
 
+@keyframes loadProducts{
+    0% {top:100px ;opacity:0}
+    100% {top:0;opacity: 1;}
+}
+
 .Products{
     height: auto;
     width: 100%;
     display: grid ;
     grid-template-columns:  1fr 1fr 1fr;
     justify-items: center;
+    animation: loadProducts 1s linear;
 }
 .Product{
     width: 300px;
