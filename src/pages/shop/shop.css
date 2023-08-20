@@ -1,10 +1,22 @@
 .Shop{
-    width: 100%;
+    width: 100%;    
 }
 .ShopTitle{
     margin-top: 100px;
     text-align: center;
     font-size: 35px;
+    transition: 0.2s ease-in;
+    background: linear-gradient(to left,rgb(179, 0, 255) ,black,rgb(85, 2, 163));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-in;
+    animation: titleHover 2.5s forwards;
+}
+
+@keyframes titleHover{
+    0% {background-position: 0 0;}
+    100%{background-position: 100vw ;}
 }
 
 @keyframes loadProducts{
