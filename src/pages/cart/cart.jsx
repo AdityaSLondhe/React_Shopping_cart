@@ -1,8 +1,9 @@
-import React from 'react'
-import {Products} from '../../assets/product'
-import { Product } from '../shop/Product'
+import React, { useContext } from 'react'
+import { Products } from '../../Products'
+// import { Product } from '../shop/Product'
+import { ShopContext } from '../../context/shop-context'
 export const Cart = () => {
-  // const [cart,setcartItems]
+  const {cartItems, addToCart, removeFromCart}=useContext(ShopContext);
 
   return (
     <div className='cart'>
@@ -10,8 +11,11 @@ export const Cart = () => {
         <h1>Your Cart Items</h1>
       </div>
       <div className='cartItems'>
-      {Product.map((ele)=>{
-
+      {Products.map((product)=>{
+        // <Product data={product}/>
+        if(cartItems[product.id]!==0){
+          return <cartItem data={product}/>;
+        }
       })}
       </div>
     </div>
